@@ -99,6 +99,37 @@ plot(sentdol)
 #installimo il pacchetto viridis in cima
 
 #viridis
-plot(sentdol, col=plasma(100)) #si può scegliere un tipo di colori, cercare su internet viridis package R per avere la legenda 
+plot(sentdol[[4]], col=plasma(100)) #si può scegliere un tipo di colori, cercare su internet viridis package R per avere la legenda 
+
+#Raster matrice di pixel 
+# nlyr(sentdol) sono i layer --> number of layer
+# ncell(sentdoll) sono i pixel di ogni layer, va moltiplicato per 4 layer che abbiamo in sentdol
+
+# Layers 
+# 1 = blue (b2)
+# 2 = green (b3)
+# 3 = red (b4)
+# 4 = infrared (b8)
+
+# Plot con i colori RGB, nelle parentesi mettiamo l'immagine di riferimento, e ogni colore associato 
+im.plotRGB(sentdol, r=3, g=2, b=1) # Immagine a colori naturali, abbiamo associato ad ogni colore RGB il colore del layer corrispondente
+
+# Immagine a falsi colori, inseriamo la banda 4, una delle 3 dobbiamo toglierla, togliamo la blu perchè non ci dà tanti dati, facciamo scattare le bande di una posizione
+im.plotRGB(sentdol, r=4, g=3, b=2) # nella componente Red abbiamo messo l'infrarosso vicino, siccome le piante riflettono molto l'infrarosso, nell'immagine verranno colorate di rosso
+# L'acqua assorbe molto infrarosso quindi la vediamo scura
+
+# Exercise: plot the images using the NIR ontop of the green component of the RGB scheme
+im.plotRGB(sentdol, r=3, g=4, b=2) 
+im.plotRGB(sentdol, r=1, g=4, b=2) 
+
+im.multiframe(1, 2)
+im.plotRGB(sentdol, r=3, g=4, b=2) 
+im.plotRGB(sentdol, r=1, g=4, b=2) 
+
+# Infrarosso sul blu
+im.plotRGB(sentdol, r=3, g=1, b=4) 
+
+
+
 
 
