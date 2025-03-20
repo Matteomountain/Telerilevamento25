@@ -16,7 +16,7 @@ This will create the following output image:
 
 > Note 1: Se vuoi metterci il file PDF cerca il tutorial su Stack overflow
 
-> Note 2: Se vuoi info sul programma Copernicus dell'Esa vai su https://www.copernicus.eu/it/taxonomy/term/1232
+> Note 2: Se vuoi info sul programma [Copernicus](https://www.copernicus.eu/it/taxonomy/term/1232) dell'Esa
 
 
 
