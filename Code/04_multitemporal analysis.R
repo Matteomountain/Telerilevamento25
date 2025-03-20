@@ -36,7 +36,7 @@ plot(grdif)
 grdif = gr[[4]] - gr[[1]] #2015 - 2000 --> Parti gialle dove è aumentata la T dal 2000 al 2015. Parti scure dove è diminuita
 plot(grdif, col=magma(100))
 
-# _____________________________
+# _____________________________ Exporting data
 
 setwd("~/Downloads/") # Abbiamo scelto il percorso per salvare un file
 getwd() # Per vedere dove si salverà
