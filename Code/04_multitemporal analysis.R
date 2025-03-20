@@ -1,5 +1,6 @@
 # R code for multitemporal analysis
 
+install.packages("ggridges") # Serve per creare ridgeline plots
 library(terra)
 library(imageRy)
 library(viridis)
@@ -50,12 +51,38 @@ plot(grdif) # Poi plottiamo l'immagine che vogliamo creare il jpeg
 dev.off() # Per chiudere la funzione
 
 
+#________________________________
 
+gr = im.import("greenland")
 
+# Ridgeline plots
 
+im.ridgeline(gr, scale = 1) #scale è l'altezza del grafico
+im.ridgeline(gr, scale = 2)
 
+?im.ridgeline   # mi apre la guida della funzione
 
+im.ridgeline(gr, scale = 2, palette="mako")
 
+# Importiamo i file di Sentinel2_NDVI
+
+ndvi = im.import("Sentinel2") # mettiamo il nome in comune per le 4 immagini per importarle tutte in un colpo 
+
+im.ridgeline(ndvi, scale=2) # dobbiamo cambiare i nomi perchè si chiamano tutti ndvi e fa un grafico unico
+# Cambiamo i nomi           
+# Sentinel2_NDVI_2020-02-21.tif  
+# Sentinel2_NDVI_2020-05-21.tif  
+# Sentinel2_NDVI_2020-08-01.tif  
+# Sentinel2_NDVI_2020-11-27.tif  
+
+names(ndvi) = c("02_Feb", "05_May", "08_Aug", "11_Nov") # Abbiamo cambiato i nomi di tutti 
+im.ridgeline(ndvi, scale=2, palette="mako")
+
+pairs(ndvi)
+
+plot(ndvi[[1]], ndvi[[2]])
+
+......
 
 
 
