@@ -1,4 +1,6 @@
 # Code for calculating spatial variability 
+https://www.cuemath.com/data/standard-deviation/
+
 install.packages("RStoolbox")
 
 library(terra)
@@ -17,8 +19,8 @@ m = (22 + 23 + 23 + 49) / 4
 # Variabilità attorno a questa media
 
 num = (23-29.25)^2 + (22-29.25)^2 + (23-29.25)^2 + (49-29.25)^2  # scarto quadratico
-
-variance = num / 4 # scarto quadratico medio
+den = 4 - 1
+variance = num / den # scarto quadratico medio
 
 stdev= sqrt(variance) #sqrt è la radice quadrata, stdev è la deviazione standard
 
