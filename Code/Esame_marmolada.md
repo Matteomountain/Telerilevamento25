@@ -1,9 +1,9 @@
-# Marmolada - Sentinella delle Dolomiti
+# 🏔️ Marmolada - Sentinella delle Dolomiti 🏔️
 
 ## Sorde Matteo - 15 Luglio 2025
 
 
-## Analisi della variazione della copertura del ghiacciaio della Marmolada dal 2017 al 2024
+## Analisi della variazione della copertura del ghiacciaio della Marmolada dal 2017 al 2024 
 
 Tale studio utilizza le immagini satellitari relative alla Marmolada - Sentinella delle Dolomiti.
 Il codice ha l'obiettivo di quantificare la variazione della superficie del ghiacciaio della Marmolada 
@@ -271,29 +271,49 @@ diffghiacc = 9.58 - 6.54
 diffghiacc
 #3.04 è la percentuale di ghiaccio perso negli ultimi 2 anni
 ```
+---
 
-Calcoliamo l'estensione in ettari utilizzando la superfice in metri quadrati grazie alla risoluzione dell'immagine Sentinel :
+Calcoliamo l'estensione in ettari utilizzando la superfice in metri quadrati grazie alla risoluzione dell'immagine Sentinel :  
+
 Calcolo la differenza tra il 2022 e il 2024 che sono gli ultimi anni
+
 ```r
 diffghiacc = 9.58 - 6.54
-diffghiacc #3.04 è la percentuale di ghiaccio perso negli ultimi 2 anni
-
-#Calcoliamo l'estensione in ettari utilizzando la superfice in metri quadrati grazie alla risoluzione dell'immagine Sentinel :
-m22 # per vedere le dimensioni
-
-(328*1006)*10 # 10m è la risoluzione di Sentinel-2
-
-# Risultato in metri quadrati = 3299680
-# tra il 2019 e il 2019 abbiamo perso il 3.04 di 3299680
-# quindi 
-
-3299680*0.0304
-
-# risultato :  100310.3 m^2 in ettari 10.03 ha
-# Dal 2022 al 2024 il ghiacciaio della Marmolada si è ritirato di 10 ettari
+diffghiacc
 ```
 
+> [!CAUTION]
+> 3.04% è la percentuale di ghiaccio perso negli ultimi 2 anni
 
+Calcoliamo l'estensione in ettari utilizzando la superfice in metri quadrati grazie alla risoluzione dell'immagine Sentinel :
 
+```r
+m22  # per vedere le dimensioni dell'immagine
+(328*1006)*10
+# 10m è la risoluzione di Sentinel-2
+```
+
+**Risultato in metri quadrati = 3299680**  
+
+Tra il 2019 e il 2019 abbiamo perso il 3.04% di 3299680 quindi:
+
+```r
+3299680*0.0304
+```
+
+**Risultato:**  100310.3 m^2 persi, in ettari 10.03 ha
+
+>[!WARNING]
+>Dal 2022 al 2024 il ghiacciaio della Marmolada si è ritirato di 10 ettari
+
+## Conclusioni
+
+L’analisi condotta sul ritiro del ghiacciaio della Marmolada mette in evidenza una regressione significativa, in linea con il rapido riscaldamento delle temperature medie alpine. Il ghiacciaio si sta sciogliendo sempre più rapidamente a causa del riscaldamento globale, che negli ultimi decenni ha provocato una marcata perdita di massa glaciale in tutto l’arco alpino. È importante notare che l’immagine relativa all’anno 2022 presenta alcune incertezze dovute alla parziale copertura nuvolosa, che potrebbe aver influenzato la precisione nella delimitazione della fronte glaciale. Questo potrebbe aver causato una lieve sovrastima o sottostima dell’estensione residua, ma non altera la tendenza complessiva.
+
+Le proiezioni per i prossimi decenni indicano che, in assenza di un’inversione nelle attuali tendenze climatiche, il ghiacciaio della Marmolada potrebbe ridursi drasticamente fino a scomparire quasi del tutto entro la fine del secolo. I dati confermano dunque l’urgenza di azioni concrete per limitare gli effetti del cambiamento climatico e preservare ciò che resta dei ghiacciai alpini, fondamentali indicatori dello stato di salute del nostro ambiente.
+
+---
+
+# GRAZIE PER L'ATTENZIONE! 🏔🧗‍♂
 
 
