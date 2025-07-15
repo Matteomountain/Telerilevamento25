@@ -10,6 +10,10 @@ Il codice ha l'obiettivo di quantificare la variazione della superficie del ghia
 per valutarne il ritiro (presunto) in un periodo compreso tra il 2017 e il 2024, a intervalli di 2 anni. 
 Ricordiamo che nel 2022 c'è stato il crollo di una porzione di ghiacciaio. 
 
+<p align="center">
+ <img width="550" alt="Crollo" src="https://github.com/Matteomountain/Telerilevamento25/blob/main/Pics/crollo2022.jpg" /> 
+</p>
+
 ---
 
 ## Dati 
